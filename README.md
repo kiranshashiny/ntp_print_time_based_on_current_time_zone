@@ -17,3 +17,15 @@ The code uses 19800 in the third argument below, ( i.e 5.5 hrs multiplied by 360
 Set the right credentials to your wireless router in the code, Compile and Upload code to NodeMCU/ESP8266 thru the Arduino IDE, Open the Serial Monitor set at 115200 to see the current time in IST.
 
 Good Luck.
+
+
+Sample Output in the Serial Monitor is :
+		
+		
+		12:14:44
+		12:14:45
+		12:14:46
+		12:14:47
+		12:14:48
+		12:14:49
+		12:14:50
