@@ -10,7 +10,7 @@ const char *password = "****Password****";
 
 WiFiUDP ntpUDP;
 
-# Note the 19800 = 5.5 hrs X 3600 in the third argument.
+// Note the 19800 = 5.5 hrs X 3600 in the third argument.
 
 NTPClient timeClient(ntpUDP,"europe.pool.ntp.org", 19800, 60000);
 
@@ -33,4 +33,18 @@ void loop() {
   Serial.println(timeClient.getFormattedTime());
 
   delay(1000);
+
+  /* additional info for parsing date and time if it is retrieved.
+  Serial.println(timeClient.getFormattedDate());
+  // Extract date
+  int splitT = formattedDate.indexOf("T");
+  dayStamp = formattedDate.substring(0, splitT);
+  Serial.print("DATE: ");
+  Serial.println(dayStamp);
+  // Extract time
+  timeStamp = formattedDate.substring(splitT+1, formattedDate.length()-1);
+  Serial.print("HOUR: ");
+  Serial.println(timeStamp);
+  delay(1000);
+  */
 }
