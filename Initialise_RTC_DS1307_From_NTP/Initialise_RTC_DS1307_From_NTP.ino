@@ -1,8 +1,10 @@
 /* Here I have initialised the RTC DS1307 RTC.begin(), time 
  *  with the time got from NTP.
+ *  This way we dont hog the Network NTP but instead read the 
+ *  time from the RTC instead locally.
  *  
  *  NTP's call in the setup(), getFormattedTime() which returns a string.
- *  This is passed into the RTCs initialisation RTC.begin()
+ *  This is passed into the RTCs initialisation RTC.begin() time argument.
  */
 
 #include <Wire.h>
