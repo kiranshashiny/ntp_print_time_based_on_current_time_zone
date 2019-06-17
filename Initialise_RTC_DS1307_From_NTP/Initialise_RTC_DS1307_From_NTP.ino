@@ -24,6 +24,7 @@ String minsec;
 WiFiUDP ntpUDP;
 
 // Note the 19800 = 5.5 hrs X 3600 in the third argument.
+// Time zone set is IST.
 
 NTPClient timeClient(ntpUDP,"europe.pool.ntp.org", 19800, 60000);
 
@@ -41,7 +42,11 @@ void setup () {
        The Date cannot be initialized from NTP as NTP only gets the current time !!!
        This is a drawback in the code.
      */
-    
+
+    // Previous Code.    
+    //RTC.begin(DateTime(__DATE__, __TIME__ );    
+
+    // Now, insert the time that you got from NTP above.
     RTC.begin(DateTime(__DATE__, timeClient.getFormattedTime().c_str()));    
 }
 
