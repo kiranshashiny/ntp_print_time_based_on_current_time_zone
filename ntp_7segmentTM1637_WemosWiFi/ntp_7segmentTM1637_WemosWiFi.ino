@@ -1,3 +1,16 @@
+/*	 This code uses the Wemos D1 mini and gets the current time from NTP server
+   	display it on the TM1367 7 segment display.
+
+	This Wemos module connects to the WiFi router at home and hooks to 
+	NTP server collects the time every minute.
+
+	Enhancements : To set the time to RTC and not read from NTP all the time.
+
+	The Digital I/O pins of wemos are D1,D2 and D3, D4 connected to CLK and DIO of the TM1637 display .
+
+	! One of the feature of this code is that the colon on the display blinks.
+*/
+
 #include <Arduino.h>
 #include <TM1637Display.h>
 #include <NTPClient.h>
@@ -14,8 +27,8 @@
 #define CLK_2 D1
 #define DIO_2 D2
 
-const char *ssid     = "NETGEAR84";
-const char *password = "welcome2ibm";
+const char *ssid     = "SSID";
+const char *password = "Password";
 
 // The amount of time (in milliseconds) between tests
 #define TEST_DELAY   500
