@@ -5,6 +5,8 @@
  *  
  *  NTP's call in the setup(), getFormattedTime() which returns a string.
  *  This is passed into the RTCs initialisation RTC.begin() time argument.
+ *
+ *  This is compiled on Arduino IDE, and uploaded to ESP8266
  */
 
 #include <Wire.h>
@@ -14,8 +16,8 @@
 #include <ESP8266WiFi.h>
 #include <WiFiUdp.h>
 
-const char *ssid     = "NETGEAR84";
-const char *password = "welcome2ibm";
+const char *ssid     = "SSID";
+const char *password = "Password";
 
 RTC_Millis RTC;
 
